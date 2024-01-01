@@ -1,44 +1,57 @@
 function getComputerChoice() {
-    choice = ["rock","paper","scissors"];
-    choices = Math.floor(Math.random() * 3);
-    return choice[choices];
+    let choice = ["rock" , "paper" , "scissors"];
+    let choices = Math.floor(Math.random() * 3);
+    let computerChoice = choice[choices];
+    return computerChoice;
 }
 
+let computerScore = 0;
+let playerScore = 0;
 
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    const playerSelection = prompt("Please enter a choice: ");
-    let playerSelect = playerSelection.toLowerCase();
-    const computerSelection = getComputerChoice();
-    function playRound(playerSelection, computerSelection) {
-        if (playerSelect === "rock" && computerSelection === "paper") {
-            return "You Lose! Paper beats Rock";
-        } else if (playerSelect === "paper" && computerSelection === "rock") {
-            return "You Win! Paper beats Rock";
-        } else if (playerSelect === "paper" && computerSelection === "scissors") {
-            return "You Lose! Scissors beats Paper";
-        } else if (playerSelect === "scissors" && computerSelection === "paper") {
-            return "You Win! Scissors beats Paper";
-        } else if (playerSelect === "rock" && computerSelection === "scissors") {
-            return "You Win! Rock beats Scissors";
-        } else if (playerSelect === "scissors" && computerSelection === "rock") {
-            return "You Lose! Rock beats Scissors";
-        } else {
-            return "Draw play again";
-        }
-    }
-     
-    let count = 0;
-    while (count <= 5){
-        if (playRound() === "You Win! Paper beats Rock" || "You Win! Scissors beats Paper" || "You Win! Rock beats Scissors") {
-                return `Your score is ${playerScore += 1}`;
-        } else if ( playRound() === "You Win! Rock beats Scissors" || "You Lose! Scissors beats Paper" || "You Lose! Paper beats Rock") {
-                return `Computer's score is ${computerScore += 1}`;
-        }
-        playRound();
-    }
+function playGame(playerChoice, computerSelection) {
+    let message;
 
+    if (playerChoice === computerSelection) {
+        message = "This is a tie... Play again";
+        return message;
+    }
+    
+    if (playerChoice === "paper" && computerSelection === "rock" || playerChoice === "rock" && computerSelection === "scissors" || playerChoice === "scissors" && computerSelection === "paper") {
+        playerScore++;
+        message = "Congrats! You have won!";
+        return message;
+    } else {
+        message = "You lose! Try harder. Don't lose next time!";
+        computerScore++;
+        return message;
+    }
 }
 
-console.log(game());
+function runGame() {
+    let count = 1;
+    do {
+        let computerSelection = getComputerChoice();
+        console.log(computerSelection)
+        let playerSelection = prompt("Please enter a choice: ");
+        const playerSelect = playerSelection.toLowerCase();
+        let score = playGame(playerSelect , computerSelection)
+        console.log( score)
+        count++
+    } while (count <= 5);
+   // console.log( `Your score is ${playerScore}`);
+   // console.log(`You lose ${computerScore} times`)
+    let winner;
+    if (playerScore === computerScore ) {
+        winner = "It was a tough game.. It ended in draw.";
+        console.log(winner);
+    } else if (playerScore > computerScore) {
+        winner = " Hurray! You play really well and you won.";
+        console.log(winner);
+    } else {
+        winner = "Oh! What a let down. May fortune favour you next time..";
+        console.log(winner);
+    }
+   
+}
+
+runGame()
