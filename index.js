@@ -1,3 +1,25 @@
+//ui
+const paper = document.querySelector(".paper");
+const rock = document.querySelector(".rock");
+const scissors = document.querySelector(".scissors");
+var playerSelection;
+
+paper.addEventListener("click" , (event) => {
+    playerSelection = event.target.innerText;
+    runGame();
+    return playerSelection;
+})
+rock.addEventListener("click" , (event) => {
+    playerSelection = event.target.innerText;
+    runGame();
+    return playerSelection;
+})
+scissors.addEventListener("click" , (event) => {
+    playerSelection = event.target.innerText;
+    runGame();
+    return playerSelection;
+})
+// game play
 function getComputerChoice() {
     let choice = ["rock" , "paper" , "scissors"];
     let choices = Math.floor(Math.random() * 3);
@@ -29,17 +51,16 @@ function playGame(playerChoice, computerSelection) {
 
 function runGame() {
     let count = 1;
-    do {
+    // do {
         let computerSelection = getComputerChoice();
         console.log(computerSelection)
-        let playerSelection = prompt("Please enter a choice: ");
+       //let playerSelection = prompt("Please enter a choice: ");
         const playerSelect = playerSelection.toLowerCase();
         let score = playGame(playerSelect , computerSelection)
         console.log( score)
-        count++
-    } while (count <= 5);
-   // console.log( `Your score is ${playerScore}`);
-   // console.log(`You lose ${computerScore} times`)
+    //     count++
+    // } while (count <= 5);
+
     let winner;
     if (playerScore === computerScore ) {
         winner = "It was a tough game.. It ended in draw.";
@@ -54,4 +75,4 @@ function runGame() {
    
 }
 
-runGame()
+//runGame()
