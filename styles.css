@@ -113,7 +113,7 @@ p.rulePara {
 
 @media (max-width: 650px) {
     body {
-        font-size: medium;
+        font-size: large;
     }
 
     img {
@@ -132,5 +132,13 @@ p.rulePara {
     .scores {
         width: 250px;
         margin: 0 auto;
+    }
+
+    .rule {
+        font-size: larger;
+    }
+
+    .ruulPara {
+        margin-bottom: 15px;
     }
 }
