@@ -21,12 +21,18 @@ const mainCon = document.querySelector("main .container")
 const rule = document.querySelector(".rule");
 const rulePara = document.querySelector("p.rulePara");
 rulePara.style.display = "none";
-rule.addEventListener("click" ,  () => {
-    rulePara.style.display = "block";
-    rule.addEventListener("click" , () => {
+rule.addEventListener("click" , ruleDisplay)
+
+// function to check rule
+function ruleDisplay() {
+    if (rule.textContent === "Click here to show rules") {
+        rule.textContent = "Remove rules";
+        rulePara.style.display = "block";
+    } else {
+        rule.textContent = "Click here to show rules";
         rulePara.style.display = "none";
-    })
-})
+    }
+}
 
 paper.addEventListener("click" , (event) => {
     playerSelection = event.target.innerText;
@@ -123,7 +129,7 @@ function runGame() {
     
 }
 
-// chech if any of the playerscores have reached 5 before running game
+// check if any of the playerscores have reached 5 before running game
 function checkPlay() {
     if (playerScore === 5 || computerScore === 5) {
         if (playerScore > computerScore) {

@@ -38,6 +38,7 @@ button {
     background-color: #47bad2;
     font-size: large;
     box-shadow: 0 5px 15px;
+    border-radius: 15px;
 }
 
 a {
