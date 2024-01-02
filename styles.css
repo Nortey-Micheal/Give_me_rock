@@ -94,6 +94,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 15px;
+    border: #4067a4 solid 2px;
 }
 
 .container h1 {
@@ -108,9 +109,7 @@ p.rulePara {
     padding: 10px;
 }
 
-.scores div {
-    border: #4067a4 solid 2px;
-}
+
 
 @media (max-width: 650px) {
     body {
