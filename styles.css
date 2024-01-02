@@ -111,7 +111,7 @@ p.rulePara {
     border: black solid 2px;
 } */
 
-@media (max-width: 800px) {
+@media (max-width: 650px) {
     body {
         font-size: medium;
     }
