@@ -113,7 +113,7 @@ p.rulePara {
 
 @media (max-width: 800px) {
     body {
-        font-size: 16px;
+        font-size: medium;
     }
 
     img {
@@ -123,5 +123,14 @@ p.rulePara {
     button {
         max-width: 150px;
         max-height: 150px;
+    }
+
+    h1{
+        font-size: x-large;
+    }
+
+    .scores {
+        width: 400px;
+        margin: 0 auto;
     }
 }
