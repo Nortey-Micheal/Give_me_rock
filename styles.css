@@ -40,6 +40,7 @@ button {
     font-size: large;
     box-shadow: 0 5px 15px;
     border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 a {
@@ -107,9 +108,9 @@ p.rulePara {
     padding: 10px;
 }
 
-/* .scores p {
-    border: black solid 2px;
-} */
+.scores div {
+    border: #4067a4 solid 2px;
+}
 
 @media (max-width: 650px) {
     body {
