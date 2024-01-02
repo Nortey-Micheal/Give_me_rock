@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #fff;
+    font-size: 18px;
 }
 
 img {
@@ -94,9 +95,17 @@ a {
     margin-top: 15px;
 }
 
-/* p.rulePara {
+h1 {
+    text-decoration: wavy;
+    text-decoration-color: #f4f4f4;
+    text-decoration-line: underline;
+}
+
+p.rulePara {
     border: #449ec2 solid 2px;
-} */
+    text-align: start;
+    padding: 10px;
+}
 
 /* .scores p {
     border: black solid 2px;
