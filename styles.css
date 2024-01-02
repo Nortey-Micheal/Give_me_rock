@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 img {
@@ -110,3 +110,18 @@ p.rulePara {
 /* .scores p {
     border: black solid 2px;
 } */
+
+@media (max-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+
+    img {
+        max-width: 150px;
+    }
+    
+    button {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
