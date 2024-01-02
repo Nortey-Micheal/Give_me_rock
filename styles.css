@@ -10,6 +10,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    color: #fff;
 }
 
 img {
@@ -19,7 +20,7 @@ img {
 main {
     flex-grow: 1;
     display: flex;
-    background-color: royalblue;
+    background-color: #4067a4;
 }
 
 main .container {
@@ -34,8 +35,9 @@ button {
     width: 125px;
     height: 125px;
     align-self: center;
-    background-color: yellowgreen;
+    background-color: #47bad2;
     font-size: large;
+    box-shadow: 0 5px 15px;
 }
 
 a {
@@ -70,7 +72,31 @@ a {
 
 .footer {
     text-align: center;
-    background-color: black;
+    background-color: #261b51;
     color: white;
 }
 
+.scores {
+    border:#47bad2 solid 2px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #449ec2;
+    color: #f4f4f4;
+}
+
+.scores div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* p.rulePara {
+    border: #449ec2 solid 2px;
+} */
+
+/* .scores p {
+    border: black solid 2px;
+} */
